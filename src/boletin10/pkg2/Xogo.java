@@ -1,19 +1,28 @@
-package boletin10.pkg2;
+ package boletin10.pkg2;
 
 import javax.swing.JOptionPane;
-
+/**
+ * 
+ * @author aferreiradominguez
+ */
 public class Xogo {
 
     private int tryes;
     private int num;
-
+/**
+ * numtryes recibe a number of tryes that you can made.
+ * @return the number of tryes wich the user had selected.
+ */
     public int numtryes() {
 
         String intentos = JOptionPane.showInputDialog("introduce nº de intentos");
         tryes = Integer.parseInt(intentos);
         return tryes;
     }
-
+/**
+ * seeNum that methood generate a random number to guess by the user. 
+ * @return a random number.
+ */
     public int seeNum() {
 
         do {
@@ -22,7 +31,10 @@ public class Xogo {
         } while (num < 1 || num > 50);
         return num;
     }
-
+/**
+ * xogarAdiv is a method where the user introduce a number and the user win if answer the correct number.
+ * 
+ */
     public void xogarAdiv() {
         int contador;
         String solucion = JOptionPane.showInputDialog("adiviña nº entre 1 e 50");
